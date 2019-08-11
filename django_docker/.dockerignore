@@ -1,0 +1,10 @@
+Dockerfile*
+docker-compose*
+.dockerignore
+.vscode
+.django_tutorial
+.venv
+LICENSE*
+README*
+.git
+.gitignore

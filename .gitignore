@@ -4,3 +4,5 @@
 .vscode
 __pycache__
 secret*
+secret.env
+secret.env.db
