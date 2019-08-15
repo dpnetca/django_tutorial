@@ -1,0 +1,31 @@
+{% extends "simpleforms/base.html" %}
+
+{% block content %}
+    <h1>Org Structure</h1>
+    <ul>
+    {% for org in orgs %}
+        <li>{{ org }}</li>
+        <ul>
+        {% for exec in execs %}
+            {% if exec.organization == org %}
+                <li>{{ exec }}</li>
+                <ul>
+                {% for mgr in mgrs %}
+                    {% if mgr.boss == exec %}
+                        <li>{{ mgr }}</li>
+                        <ul>
+                        {% for empl in empls %}
+                            {% if empl.boss == mgr %}
+                                <li>{{ empl }}</li>
+                            {% endif %}
+                        {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    {% endfor %}
+    </ul>
+{% endblock %}

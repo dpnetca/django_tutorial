@@ -6,3 +6,4 @@ __pycache__
 secret*
 secret.env
 secret.env.db
+db.sqlite3
