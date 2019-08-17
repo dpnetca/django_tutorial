@@ -1,1 +1,6 @@
+# used for all projects
 django
+# cripsy forms used for cs_blog project
+django-crispy-forms
+# pillow required for images in cs_blog project
+Pillow
